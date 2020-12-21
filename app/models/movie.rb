@@ -1,11 +1,4 @@
 class Movie < ApplicationRecord
-
-    def index
-        
-    end
-
-    def create
-        # movie = Movie.new(title: )
-    end
-
+    has_many :nominations
+    has_many :users, through: :nominations
 end
