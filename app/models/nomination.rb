@@ -1,4 +1,4 @@
 class Nomination < ApplicationRecord
-    belongs_to :user
-    belongs_to :movie
+    validates :title, presence: true
+    validates :year, presence: true
 end
