@@ -32,7 +32,20 @@ class NominationsController < ApplicationController
     end
 
     def index
+        nominations = Nomination.all
 
+        if nominations
+            render json: {
+                auth: true,
+                nominations: nominations,
+                message: "Nominations found"
+            }
+        else
+            render json: {
+                auth: false,
+                message: "No nominations found"
+            }
+        end
     end
     
 end
