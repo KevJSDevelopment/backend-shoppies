@@ -35,6 +35,8 @@ class NominationsController < ApplicationController
         nominations = Nomination.all
 
         if nominations
+            nominations = nominations.sort { |a, b| b.total <=> a.total }
+            
             render json: {
                 auth: true,
                 nominations: nominations,

@@ -4,7 +4,7 @@ class CreateNominations < ActiveRecord::Migration[6.0]
       t.string :title
       t.string :year
       t.integer :total
-
+      
       t.timestamps
     end
   end
